@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clover | HealthTap - See a doctor from your favorite chair — and get $150.</title>
+  <meta name="description" content="Your Clover Health plan includes LiveHealthy video visits at no extra cost. No driving. No waiting rooms. Just real medical care from the comfort of home.">
+  <meta name="theme-color" content="#0c847a">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'primary': '#0C847A',
+            'primary-dark': '#0A6E66',
+            'dark-green': '#204C43',
+            'charcoal': '#343A40',
+            'cream': '#FFFCF7',
+            'cream-dark': '#F5EDE4',
+            'gold': '#9A580E',
+            'gold-accent': '#C4922A',
+            'gold-light': '#FBD999',
+            'gray-text': '#6B7280',
+            'dark-text': '#1A1A1A',
+          },
+          fontFamily: {
+            'gilroy': ['"Gilroy Bold"', 'Arial', 'sans-serif'],
+            'noto': ['"Noto Sans"', 'sans-serif'],
+          },
+          maxWidth: {
+            'content': '1200px',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Fonts -->
+  <style>
+    @font-face {
+      font-family: "Gilroy Bold";
+      src: url("assets/fonts/gilroy-bold.woff2");
+      font-display: swap;
+      font-style: normal;
+      font-weight: 700;
+    }
+    /* Hide default details marker */
+    details summary::-webkit-details-marker { display: none; }
+    details summary { list-style: none; }
+  </style>
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="font-noto text-dark-text bg-white">
+
+  <!-- ============ NAVBAR (sticky) ============ -->
+  <nav class="bg-dark-green sticky top-0 z-50">
+    <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+      <!-- Logos -->
+      <div class="flex items-center gap-3">
+        <img src="assets/images/clover-health-logo.svg" alt="Clover Health" class="h-5">
+        <span class="text-white/40 text-lg font-light">|</span>
+        <img src="assets/images/healthtap-logo.svg" alt="HealthTap" class="h-6">
+      </div>
+      <!-- Right side -->
+      <div class="flex items-center gap-4">
+        <a href="tel:0000000000" class="hidden md:flex items-center gap-2 border border-primary text-white text-sm px-5 py-2 rounded-full hover:bg-primary/10 transition-colors">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M5.857 6.26c.021.79.55 1.81 1.807 3.068 1.257 1.258 2.274 1.788 3.064 1.809.414.011.667-.11.766-.209 1.263-1.267 2.122-1.487 4.051-.483 2.672 1.39 3.271 2.81 1.259 4.825-2.885 2.888-7.131 2.301-12.252-2.827C-.57 7.314-1.156 3.063 1.727.176 2.781-.877 3.715-1.23 4.605-.855c.723.307 1.285 1.025 1.943 2.29 1.002 1.932.782 2.791-.483 4.058-.098.098-.22.351-.208.768z" transform="translate(0 2)" fill="white"/></svg>
+          000-000-0000 (TTY: 711)
+        </a>
+        <a href="#schedule" class="hidden md:flex items-center gap-2 bg-white hover:bg-gray-100 text-primary text-sm font-bold px-5 py-2 rounded-full transition-colors">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M14 4H2V3.5C2 2.119 3.119 1 4.5 1H6V.25c0-.138.112-.25.25-.25h1.5c.138 0 .25.112.25.25V1h4V.25c0-.138.112-.25.25-.25h1.5c.138 0 .25.112.25.25V1h1.5C16.881 1 18 2.119 18 3.5V4zm0 1v7.5c0 1.381-1.119 2.5-2.5 2.5h-7C3.119 15 2 13.881 2 12.5V5h12zM9 8.75V7.25C9 7.112 8.888 7 8.75 7h-1.5C7.112 7 7 7.112 7 7.25v1.5c0 .138.112.25.25.25h1.5C8.888 9 9 8.888 9 8.75zm-4 0V7.25C5 7.112 4.888 7 4.75 7h-1.5C3.112 7 3 7.112 3 7.25v1.5c0 .138.112.25.25.25h1.5C4.888 9 5 8.888 5 8.75z" transform="translate(-1 0)" fill="#029688"/></svg>
+          Schedule visit online
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="bg-cream">
+      <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-14">
+        <div class="grid lg:grid-cols-2 gap-10 items-center">
+          <!-- Left content -->
+          <div>
+            <div class="inline-flex items-center gap-2 border border-primary/30 bg-white rounded-lg px-4 py-2 mb-6">
+              <span class="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              </span>
+              <span class="text-primary text-xs font-bold uppercase tracking-wider">Get $150 LiveHealthy Visit Reward Dollars</span>
+            </div>
+            <h1 class="font-gilroy text-4xl lg:text-5xl text-gold leading-tight mb-6">
+              See a doctor from your favorite chair
+            </h1>
+            <p class="text-gray-text text-lg mb-8 max-w-lg">
+              Your Clover Health plan includes a LiveHealthy Visit—<strong>covered at no additional cost to you.</strong> One easy way to complete it: a video appointment with a board-certified doctor through HealthTap. No driving. No waiting room.
+            </p>
+            <div class="flex flex-wrap gap-3 mb-8">
+              <a href="tel:0000000000" class="flex items-center justify-center gap-2 border border-primary text-primary font-bold px-6 py-3 rounded-full hover:bg-primary/5 transition-colors">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M5.857 6.26c.021.79.55 1.81 1.807 3.068 1.257 1.258 2.274 1.788 3.064 1.809.414.011.667-.11.766-.209 1.263-1.267 2.122-1.487 4.051-.483 2.672 1.39 3.271 2.81 1.259 4.825-2.885 2.888-7.131 2.301-12.252-2.827C-.57 7.314-1.156 3.063 1.727.176 2.781-.877 3.715-1.23 4.605-.855c.723.307 1.285 1.025 1.943 2.29 1.002 1.932.782 2.791-.483 4.058-.098.098-.22.351-.208.768z" transform="translate(0 2)" fill="#0C847A"/></svg>
+                000-000-0000 (TTY: 711)
+              </a>
+              <a href="#schedule" class="flex items-center gap-2 bg-primary hover:bg-primary-dark text-white font-bold px-6 py-3 rounded-full transition-colors">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M14 4H2V3.5C2 2.119 3.119 1 4.5 1H6V.25c0-.138.112-.25.25-.25h1.5c.138 0 .25.112.25.25V1h4V.25c0-.138.112-.25.25-.25h1.5c.138 0 .25.112.25.25V1h1.5C16.881 1 18 2.119 18 3.5V4zm0 1v7.5c0 1.381-1.119 2.5-2.5 2.5h-7C3.119 15 2 13.881 2 12.5V5h12zM9 8.75V7.25C9 7.112 8.888 7 8.75 7h-1.5C7.112 7 7 7.112 7 7.25v1.5c0 .138.112.25.25.25h1.5C8.888 9 9 8.888 9 8.75z" transform="translate(-1 0)" fill="white"/></svg>
+                Schedule visit online
+              </a>
+            </div>
+            <div class="grid grid-cols-3 gap-3 text-sm md:flex md:flex-wrap">
+              <span class="flex flex-col items-center gap-1.5 text-center text-dark-text md:flex-row md:bg-white md:border md:border-gray-200 md:rounded-full md:px-4 md:py-2">
+                <svg class="w-5 h-5 text-primary md:w-4 md:h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                <span class="text-xs md:text-sm">Private and Secure</span>
+              </span>
+              <span class="flex flex-col items-center gap-1.5 text-center text-dark-text md:flex-row md:bg-white md:border md:border-gray-200 md:rounded-full md:px-4 md:py-2">
+                <svg class="w-5 h-5 text-primary md:w-4 md:h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                <span class="text-xs md:text-sm">Board-Certified Doctors</span>
+              </span>
+              <span class="flex flex-col items-center gap-1.5 text-center text-dark-text md:flex-row md:bg-white md:border md:border-gray-200 md:rounded-full md:px-4 md:py-2">
+                <svg class="w-5 h-5 text-primary md:w-4 md:h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <span class="text-xs md:text-sm">4.8/5 Doctor Rating</span>
+              </span>
+            </div>
+          </div>
+          <!-- Right image -->
+          <div class="relative">
+            <img src="assets/images/hero-couple.png" alt="Elderly couple enjoying a video visit with their doctor from home" class="rounded-2xl w-full object-cover">
+            <div class="absolute bottom-4 left-4 bg-white rounded-xl shadow-lg p-3 flex items-center gap-3">
+              <img src="assets/images/testimonial-woman.png" alt="Dr. Liesa Harte" class="w-10 h-10 rounded-full object-cover">
+              <div class="text-xs">
+                <p class="font-bold text-dark-text">Dr. Liesa Harte</p>
+                <p class="text-gray-text">Primary Care Physician at HealthTap</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHAT IS A LIVEHEALTHY VISIT ============ -->
+    <section class="bg-white">
+      <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20 text-center">
+        <p class="text-primary text-xs font-bold uppercase tracking-wider mb-3">Video visit with a doctor</p>
+        <h2 class="font-gilroy text-3xl lg:text-4xl text-gold mb-6">What is a LiveHealthy Visit?</h2>
+        <p class="text-gray-text max-w-2xl mx-auto mb-12">
+          A LiveHealthy Visit can be completed with a board-certified doctor from HealthTap — at no additional cost to you. By video, you'll have a health check-in. The doctor will ask you questions, and you'll have a chance to ask your own. During your visit they'll:
+        </p>
+        <div class="grid md:grid-cols-3 gap-8 max-w-3xl mx-auto">
+          <div class="flex flex-col items-center text-center bg-white border border-gray-200 rounded-2xl p-6">
+            <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+              <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15a2.25 2.25 0 012.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25z"/></svg>
+            </div>
+            <p class="text-dark-text text-sm">Review your overall health and answer your health questions</p>
+          </div>
+          <div class="flex flex-col items-center text-center bg-white border border-gray-200 rounded-2xl p-6">
+            <div class="w-14 h-14 bg-pink-50 rounded-full flex items-center justify-center mb-4">
+              <svg class="w-7 h-7 text-pink-500" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5"/></svg>
+            </div>
+            <p class="text-dark-text text-sm">Go over your medications  and order refills, if needed</p>
+          </div>
+          <div class="flex flex-col items-center text-center bg-white border border-gray-200 rounded-2xl p-6">
+            <div class="w-14 h-14 bg-emerald-50 rounded-full flex items-center justify-center mb-4">
+              <svg class="w-7 h-7 text-emerald-500" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg>
+            </div>
+            <p class="text-dark-text text-sm">Order lab work or set up specialist referrals, if needed</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EARN $150 REWARDS ============ -->
+    <section class="bg-cream">
+      <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20 text-center">
+        <p class="text-primary text-xs font-bold uppercase tracking-wider mb-3">Complete your LiveHealthy visit</p>
+        <h2 class="font-gilroy text-3xl lg:text-4xl text-gold mb-4">Earn $150 LiveHealthy Rewards dollars</h2>
+        <p class="text-gray-text mb-12">Clover Health members earn rewards for healthy activities</p>
+
+        <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12">
+          <!-- Step 1 -->
+          <div class="bg-white rounded-2xl p-8 text-center border border-gray-100">
+            <div class="w-10 h-10 bg-primary/15 text-primary font-bold rounded-lg flex items-center justify-center mx-auto mb-4">1</div>
+            <h3 class="font-gilroy text-xl text-charcoal mb-2">Schedule</h3>
+            <p class="text-gray-text text-sm">Call us or pick a time online. Same-day/same-week.</p>
+          </div>
+          <!-- Step 2 -->
+          <div class="bg-white rounded-2xl p-8 text-center border border-gray-100">
+            <div class="w-10 h-10 bg-primary/15 text-primary font-bold rounded-lg flex items-center justify-center mx-auto mb-4">2</div>
+            <h3 class="font-gilroy text-xl text-charcoal mb-2">Complete visit</h3>
+            <p class="text-gray-text text-sm">Talk with a doctor by video, get answers, and health tips.</p>
+          </div>
+          <!-- Step 3 (highlighted) -->
+          <div class="bg-dark-green rounded-2xl p-8 text-center">
+            <div class="w-10 h-10 bg-gold-accent text-white font-bold rounded-lg flex items-center justify-center mx-auto mb-4">3</div>
+            <h3 class="font-gilroy text-xl text-white mb-2">Earn rewards</h3>
+            <p class="text-white/70 text-sm"><span class="text-gold-accent font-bold">$150</span> LiveHealthy Reward dollars* added to LiveHealthy Flex Plus card.</p>
+          </div>
+        </div>
+
+        <p class="font-bold text-charcoal mb-4">See a doctor — earn rewards. Schedule now.</p>
+        <div class="flex flex-wrap justify-center gap-3 mb-3">
+          <a href="tel:0000000000" class="flex items-center gap-2 border border-primary text-primary font-bold px-6 py-3 rounded-full hover:bg-primary/5 transition-colors">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M5.857 6.26c.021.79.55 1.81 1.807 3.068 1.257 1.258 2.274 1.788 3.064 1.809.414.011.667-.11.766-.209 1.263-1.267 2.122-1.487 4.051-.483 2.672 1.39 3.271 2.81 1.259 4.825-2.885 2.888-7.131 2.301-12.252-2.827C-.57 7.314-1.156 3.063 1.727.176 2.781-.877 3.715-1.23 4.605-.855c.723.307 1.285 1.025 1.943 2.29 1.002 1.932.782 2.791-.483 4.058-.098.098-.22.351-.208.768z" transform="translate(0 2)" fill="#0C847A"/></svg>
+            000-000-0000 (TTY: 711)
+          </a>
+          <a href="#schedule" class="flex items-center gap-2 bg-primary hover:bg-primary-dark text-white font-bold px-6 py-3 rounded-full transition-colors">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M14 4H2V3.5C2 2.119 3.119 1 4.5 1H6V.25c0-.138.112-.25.25-.25h1.5c.138 0 .25.112.25.25V1h4V.25c0-.138.112-.25.25-.25h1.5c.138 0 .25.112.25.25V1h1.5C16.881 1 18 2.119 18 3.5V4zm0 1v7.5c0 1.381-1.119 2.5-2.5 2.5h-7C3.119 15 2 13.881 2 12.5V5h12zM9 8.75V7.25C9 7.112 8.888 7 8.75 7h-1.5C7.112 7 7 7.112 7 7.25v1.5c0 .138.112.25.25.25h1.5C8.888 9 9 8.888 9 8.75z" transform="translate(-1 0)" fill="white"/></svg>
+            Schedule visit online
+          </a>
+        </div>
+        <p class="text-gray-text text-sm">Open Monday through Friday, 8:00 a.m. to 6:00 p.m. ET</p>
+      </div>
+    </section>
+
+    <!-- ============ NOT SURE ABOUT TECH ============ -->
+    <section class="bg-white">
+      <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <!-- Image -->
+          <div class="relative">
+            <img src="assets/images/isaac-weaver.png" alt="Isaac Weaver, Head of Practice Operations at HealthTap" class="rounded-2xl w-full object-cover">
+            <div class="absolute bottom-4 left-4 bg-white rounded-xl shadow-lg p-3 flex items-center gap-3">
+              <div class="text-xs">
+                <p class="font-bold text-dark-text">Meet Isaac Weaver</p>
+                <p class="text-gray-text">Head of Practice Operations at HealthTap</p>
+              </div>
+            </div>
+          </div>
+          <!-- Content -->
+          <div>
+            <p class="text-primary text-xs font-bold uppercase tracking-wider mb-3">
+              <span class="inline-flex items-center gap-1.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 11.5V14m0 0V16.5m0-2.5h2.5M7 14H4.5m4.5-4.5a3 3 0 11-6 0 3 3 0 016 0zm12.75 0a3 3 0 11-6 0 3 3 0 016 0zM12.75 18a7.5 7.5 0 00-15 0h15zm12 0a7.5 7.5 0 00-15 0h15z"/></svg>
+                We're here for you
+              </span>
+            </p>
+            <h2 class="font-gilroy text-3xl lg:text-4xl text-gold mb-4">Not sure about tech?<br>That's okay.</h2>
+            <p class="text-gray-text text-lg mb-8">
+              If you have a phone, tablet, or computer, you're all set — just call us if you need a hand getting started.
+            </p>
+            <div class="space-y-3">
+              <div class="border-l-4 border-primary bg-cream rounded-r-xl p-5 max-w-md">
+                <p class="font-bold text-charcoal mb-1">Want help or more information?</p>
+                <p class="text-primary font-bold">Call HealthTap support: 000-000-0000 (TTY: 711)</p>
+                <p class="text-gray-text text-sm mt-1">Open Monday through Friday<br>8:00 a.m. to 6:00 p.m. ET</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TRUSTED CARE ============ -->
+    <section class="bg-cream">
+      <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20 text-center">
+        <p class="text-primary text-xs font-bold uppercase tracking-wider mb-3">How HealthTap works</p>
+        <h2 class="font-gilroy text-3xl lg:text-4xl text-gold mb-12">Trusted care from real doctors</h2>
+
+        <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto text-left">
+          <div class="flex gap-4 bg-white border border-gray-200 rounded-2xl p-6">
+            <div class="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+            </div>
+            <div>
+              <h3 class="font-gilroy text-lg text-charcoal mb-1">Board-certified doctors</h3>
+              <p class="text-gray-text text-sm">Chat with a doctor by video. Always a doctor, not just any provider.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 bg-white border border-gray-200 rounded-2xl p-6">
+            <div class="w-12 h-12 bg-gold-accent/20 rounded-xl flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-gold-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"/></svg>
+            </div>
+            <div>
+              <h3 class="font-gilroy text-lg text-charcoal mb-1">See us on your schedule</h3>
+              <p class="text-gray-text text-sm">When it works for you — same day or same week. Ask if your spouse is eligible, too.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 bg-white border border-gray-200 rounded-2xl p-6">
+            <div class="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"/></svg>
+            </div>
+            <div>
+              <h3 class="font-gilroy text-lg text-charcoal mb-1">Private and secure</h3>
+              <p class="text-gray-text text-sm">Your health information is protected with HIPAA-secure technology.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 bg-white border border-gray-200 rounded-2xl p-6">
+            <div class="w-12 h-12 bg-gold-accent/20 rounded-xl flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-gold-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg>
+            </div>
+            <div>
+              <h3 class="font-gilroy text-lg text-charcoal mb-1">Extra care, not a replacement</h3>
+              <p class="text-gray-text text-sm">LiveHealthy Visits do not replace your PCP. This is extra care — doctors share updates, if needed.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <section class="bg-cream">
+      <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20 text-center">
+        <div class="flex justify-center gap-1 mb-4">
+          <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <h2 class="font-gilroy text-3xl lg:text-4xl text-gold mb-12">Hear what thousands of members say...</h2>
+
+        <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+          <div class="text-center border border-gray-200 rounded-2xl p-8">
+            <img src="assets/images/testimonial-woman.png" alt="Katherine M." class="w-16 h-16 rounded-full object-cover mx-auto mb-4">
+            <p class="font-bold text-charcoal mb-3">Katherine M.</p>
+            <p class="text-dark-text text-sm">"It was quick and easy to book the appointment. I connected and got my ongoing meds refilled. It was so nice for me living in a rural community."</p>
+          </div>
+          <div class="text-center border border-gray-200 rounded-2xl p-8">
+            <img src="assets/images/testimonial-man.png" alt="Darnell S." class="w-16 h-16 rounded-full object-cover mx-auto mb-4">
+            <p class="font-bold text-charcoal mb-3">Darnell S.</p>
+            <p class="text-dark-text text-sm">"I enjoyed the candid, unhurried conversation with the doctor. All questions I had were answered, and I learned things about my meds that I didn't know!"</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SCHEDULE CTA BANNER ============ -->
+    <section class="bg-dark-green" id="schedule">
+      <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20 text-center">
+        <p class="text-white/70 text-sm uppercase tracking-wider mb-3">Same day or same week appointments</p>
+        <h2 class="font-gilroy text-3xl lg:text-4xl text-gold-light mb-4">Schedule your LiveHealthy Visit now</h2>
+        <p class="text-white/70 mb-8">
+          Tip: ask if your spouse is eligible, too. That's $300 in LiveHealthy Reward Dollars combined!*
+        </p>
+        <div class="flex flex-wrap justify-center gap-3 mb-3">
+          <a href="tel:0000000000" class="flex items-center gap-2 bg-primary hover:bg-primary-dark text-white font-bold px-6 py-3 rounded-full transition-colors">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M5.857 6.26c.021.79.55 1.81 1.807 3.068 1.257 1.258 2.274 1.788 3.064 1.809.414.011.667-.11.766-.209 1.263-1.267 2.122-1.487 4.051-.483 2.672 1.39 3.271 2.81 1.259 4.825-2.885 2.888-7.131 2.301-12.252-2.827C-.57 7.314-1.156 3.063 1.727.176 2.781-.877 3.715-1.23 4.605-.855c.723.307 1.285 1.025 1.943 2.29 1.002 1.932.782 2.791-.483 4.058-.098.098-.22.351-.208.768z" transform="translate(0 2)" fill="white"/></svg>
+            000-000-0000 (TTY: 711)
+          </a>
+          <a href="#" class="flex items-center gap-2 bg-white border border-white hover:bg-gray-100 text-primary font-bold px-6 py-3 rounded-full transition-colors">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M14 4H2V3.5C2 2.119 3.119 1 4.5 1H6V.25c0-.138.112-.25.25-.25h1.5c.138 0 .25.112.25.25V1h4V.25c0-.138.112-.25.25-.25h1.5c.138 0 .25.112.25.25V1h1.5C16.881 1 18 2.119 18 3.5V4zm0 1v7.5c0 1.381-1.119 2.5-2.5 2.5h-7C3.119 15 2 13.881 2 12.5V5h12zM9 8.75V7.25C9 7.112 8.888 7 8.75 7h-1.5C7.112 7 7 7.112 7 7.25v1.5c0 .138.112.25.25.25h1.5C8.888 9 9 8.888 9 8.75z" transform="translate(-1 0)" fill="#0C847A"/></svg>
+            Schedule visit online
+          </a>
+        </div>
+        <p class="text-white/50 text-sm">Open Monday through Friday, 8:00 a.m. to 6:00 p.m. ET</p>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="bg-white">
+      <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+        <div class="text-center mb-12">
+          <p class="text-primary text-xs font-bold uppercase tracking-wider mb-3">Your questions answered</p>
+          <h2 class="font-gilroy text-3xl lg:text-4xl text-gold mb-4">Common Questions</h2>
+          <p class="text-gray-text max-w-2xl mx-auto">Have questions? We've got answers.</p>
+        </div>
+
+        <div class="max-w-4xl mx-auto divide-y divide-gray-200">
+          <details class="group py-6" open>
+            <summary class="flex justify-between items-center cursor-pointer font-bold text-charcoal hover:text-primary transition-colors">
+              How much does an online video visit cost a Clover Health member?
+              <span class="flex-shrink-0 ml-4">
+                <span class="group-open:hidden text-primary text-2xl font-light">+</span>
+                <span class="hidden group-open:flex w-9 h-9 bg-primary rounded-full items-center justify-center">
+                  <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+                </span>
+              </span>
+            </summary>
+            <p class="text-gray-text mt-3">Eligible Clover Health members will have no visit fees on HealthTap.</p>
+          </details>
+
+          <details class="group py-6">
+            <summary class="flex justify-between items-center cursor-pointer font-bold text-charcoal hover:text-primary transition-colors">
+              How long do I have to wait for a visit?
+              <span class="flex-shrink-0 ml-4">
+                <span class="group-open:hidden text-primary text-2xl font-light">+</span>
+                <span class="hidden group-open:flex w-9 h-9 bg-primary rounded-full items-center justify-center">
+                  <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+                </span>
+              </span>
+            </summary>
+            <p class="text-gray-text mt-3">Depending on the schedule of the HealthTap doctor you choose, you may be able to start your virtual visit with the doctor as soon as 30 minutes after scheduling your appointment.</p>
+          </details>
+
+          <details class="group py-6">
+            <summary class="flex justify-between items-center cursor-pointer font-bold text-charcoal hover:text-primary transition-colors">
+              What if I forget to ask all my questions during my visit?
+              <span class="flex-shrink-0 ml-4">
+                <span class="group-open:hidden text-primary text-2xl font-light">+</span>
+                <span class="hidden group-open:flex w-9 h-9 bg-primary rounded-full items-center justify-center">
+                  <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+                </span>
+              </span>
+            </summary>
+            <p class="text-gray-text mt-3">You can follow up with the primary care doctor by text, anytime. At no cost to you. Just select the "Text - Free" option under the doctor's name in your HealthTap account. If your doctor needs to see you in another video visit to address your questions, scheduling your next video visit is easy.</p>
+          </details>
+
+          <details class="group py-6">
+            <summary class="flex justify-between items-center cursor-pointer font-bold text-charcoal hover:text-primary transition-colors">
+              Can an online doctor write prescriptions?
+              <span class="flex-shrink-0 ml-4">
+                <span class="group-open:hidden text-primary text-2xl font-light">+</span>
+                <span class="hidden group-open:flex w-9 h-9 bg-primary rounded-full items-center justify-center">
+                  <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+                </span>
+              </span>
+            </summary>
+            <p class="text-gray-text mt-3">Yes! Get same-day prescriptions and refills sent to your preferred retail pharmacy or to Clover Health's preferred mail-order pharmacy — CVS Caremark — within 2-hours. HealthTap doctors cannot prescribe medications that are restricted at the federal or state level — such as DEA scheduled medications — or some medications that are inappropriate for prescription in video visits.</p>
+          </details>
+
+          <details class="group py-6">
+            <summary class="flex justify-between items-center cursor-pointer font-bold text-charcoal hover:text-primary transition-colors">
+              How do I select my preferred pharmacy?
+              <span class="flex-shrink-0 ml-4">
+                <span class="group-open:hidden text-primary text-2xl font-light">+</span>
+                <span class="hidden group-open:flex w-9 h-9 bg-primary rounded-full items-center justify-center">
+                  <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+                </span>
+              </span>
+            </summary>
+            <p class="text-gray-text mt-3">Before your first virtual visit on HealthTap, you will be asked to select your preferred local retail pharmacy. HealthTap also knows your preferred mail-order pharmacy, CVS Caremark. You will have the opportunity to update your preferred local retail pharmacy every time you schedule a virtual appointment. Additionally, you may change your preferred local retail pharmacy anytime in your HealthTap account "Records".</p>
+          </details>
+
+        </div>
+
+        <div class="max-w-4xl mx-auto mt-12">
+          <p class="font-bold text-charcoal mb-1">Still Have questions?</p>
+          <p class="text-gray-text text-sm">Call: 000-000-0000 (TTY: 711) or email Support at support@healthtap.com if you have any questions.</p>
+          <p class="text-gray-text text-sm">Monday through Friday, 8 AM to 6 PM ET</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LEGAL DISCLAIMER ============ -->
+    <section class="bg-white">
+      <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <p class="text-gray-text text-xs leading-relaxed">
+          *LiveHealthy rewards may not be used to purchase alcohol, tobacco products, or firearms. Not redeemable for cash. Other limitations may apply; please call Clover Health for details. Clover Health is a Preferred Provider Organization (PPO) and a Health Maintenance Organization (HMO) with a Medicare contract. Enrollment in Clover Health depends on contract renewal.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="bg-charcoal text-white">
+    <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+      <!-- Logo + badges row -->
+      <div class="flex items-center gap-6 mb-12">
+        <img src="assets/images/healthtap-logo.svg" alt="HealthTap" class="h-8">
+        <!-- Placeholder for HIPAA, SOC 2, JCAHO badges when exported from Figma -->
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Left columns: links -->
+        <div class="grid grid-cols-2 gap-8 md:col-span-2">
+          <!-- For Businesses -->
+          <div>
+            <h4 class="font-bold text-sm mb-4">For Businesses</h4>
+            <ul class="space-y-2 text-sm text-white">
+              <li><a href="#" class="hover:text-white/80 transition-colors">Direct Primary Care for Organizations</a></li>
+              <li><a href="#" class="hover:text-white/80 transition-colors">For DMEs And Pharmacies</a></li>
+              <li><a href="#" class="hover:text-white/80 transition-colors">For Health Plans</a></li>
+              <li><a href="#" class="hover:text-white/80 transition-colors">For Providers</a></li>
+            </ul>
+          </div>
+
+          <!-- Company -->
+          <div>
+            <h4 class="font-bold text-sm mb-4">Company</h4>
+            <ul class="space-y-2 text-sm text-white">
+              <li><a href="#" class="hover:text-white/80 transition-colors">About Us</a></li>
+              <li><a href="#" class="hover:text-white/80 transition-colors">Support Center</a></li>
+              <li><a href="#" class="hover:text-white/80 transition-colors">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <!-- Health Content -->
+          <div>
+            <h4 class="font-bold text-sm mb-4">Health Content</h4>
+            <ul class="space-y-2 text-sm text-white">
+              <li><a href="#" class="hover:text-white/80 transition-colors">Health Topics</a></li>
+              <li><a href="#" class="hover:text-white/80 transition-colors">Doctor Q&amp;A By Specialty</a></li>
+            </ul>
+          </div>
+
+          <!-- Join Us -->
+          <div>
+            <h4 class="font-bold text-sm mb-4">Join Us</h4>
+            <ul class="space-y-2 text-sm text-white">
+              <li><a href="#" class="hover:text-white/80 transition-colors">For Doctors</a></li>
+              <li><a href="#" class="hover:text-white/80 transition-colors">Jobs</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Right column: Download card + Questions -->
+        <div>
+          <div class="border border-white/20 rounded-2xl p-5 mb-6">
+            <div class="text-center mb-3">
+              <img src="assets/images/healthtap-app-icon.png" alt="HealthTap App" class="w-12 h-12 rounded-xl mx-auto mb-2">
+              <h4 class="font-bold text-sm">Download HealthTap</h4>
+              <p class="text-sm text-white">Video visit and message your doctor</p>
+            </div>
+            <div class="flex gap-3 items-start mb-4">
+              <img src="assets/images/qr-code.png" alt="QR code to download HealthTap" class="w-24 h-24 rounded-lg">
+              <div class="flex flex-col gap-2">
+                <a href="https://play.google.com/store/apps/details?id=com.healthtap.userhtexpress" target="_blank" rel="noopener noreferrer">
+                  <img src="assets/images/google-play-badge.svg" alt="Get it on Google Play" class="h-10">
+                </a>
+                <a href="https://apps.apple.com/us/app/healthtap-primary-care-doctors/id466079030" target="_blank" rel="noopener noreferrer">
+                  <img src="assets/images/app-store-badge.svg" alt="Download on the App Store" class="h-10">
+                </a>
+              </div>
+            </div>
+            <div class="border-t border-white/20 pt-4 text-center">
+              <h4 class="font-bold text-sm mb-2">Questions?</h4>
+              <p class="text-sm text-white">+1 (888) 828-0841</p>
+              <a href="mailto:support@healthtap.com" class="text-sm text-white hover:text-white/80 transition-colors">support@healthtap.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="border-t border-white/20 mt-10 pt-6">
+        <div class="flex justify-center gap-4 mb-4">
+          <!-- LinkedIn -->
+          <a href="#" class="text-white/50 hover:text-white transition-colors" aria-label="LinkedIn">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <!-- X/Twitter -->
+          <a href="#" class="text-white/50 hover:text-white transition-colors" aria-label="X">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+        </div>
+        <div class="flex flex-wrap justify-center gap-4 text-xs text-white/50 mb-4">
+          <a href="#" class="hover:text-white transition-colors">Home</a>
+          <a href="#" class="hover:text-white transition-colors">Terms</a>
+          <a href="#" class="hover:text-white transition-colors">Privacy</a>
+          <a href="#" class="hover:text-white transition-colors">Cookies</a>
+          <a href="#" class="hover:text-white transition-colors">DMCA</a>
+          <a href="#" class="hover:text-white transition-colors">Health Topics</a>
+          <a href="#" class="hover:text-white transition-colors">Doctors Directory</a>
+          <a href="#" class="hover:text-white transition-colors">Doctor Q&amp;A By Specialty</a>
+        </div>
+        <p class="text-center text-xs text-white/40">Copyright &copy; 2025 HealthTap, Inc.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
